@@ -1,5 +1,5 @@
 {
-  "name": "PrecisoDe",
+  "name": "AgendaSimples",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,26 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RenatoSiqueira/PrecisoDe.git"
+    "url": "git+https://github.com/RenatoSiqueira/AgendaSimples.git"
   },
   "keywords": [],
   "author": "Renato Siqueira",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RenatoSiqueira/PrecisoDe/issues"
+    "url": "https://github.com/RenatoSiqueira/AgendaSimples/issues"
   },
-  "homepage": "https://github.com/RenatoSiqueira/PrecisoDe#readme",
+  "homepage": "https://github.com/RenatoSiqueira/AgendaSimples#readme",
   "dependencies": {
     "autoprefixer": "^10.0.1",
-    "google-spreadsheet": "^3.0.13",
-    "hamburger-react": "^2.3.0",
-    "moment": "^2.29.1",
+    "date-fns": "^2.16.1",
+    "googleapis": "^66.0.0",
     "next": "^10.0.1",
     "postcss-import": "^13.0.0",
     "react": "^17.0.1",
+    "react-datepicker": "^3.3.0",
     "react-dom": "^17.0.1",
-    "react-text-loop": "^2.3.0",
-    "swr": "^0.3.8",
     "tailwindcss": "^1.9.6"
   }
 }
