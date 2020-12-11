@@ -30,7 +30,7 @@ export default async (req, res) => {
         res.json(error.message)
       }
       // console.log(result?.data) // All data
-      const appointments = result.data.items.map((appointment) => ({
+      const appointments = await result?.data?.items.map((appointment) => ({
         start: appointment.start.dateTime || appointment.start.date,
         end: appointment.end.dateTime || appointment.end.date,
         id: appointment.id,
