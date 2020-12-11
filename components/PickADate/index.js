@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import DatePicker from "react-datepicker";
+import { getDay } from 'date-fns'
 
 import "react-datepicker/dist/react-datepicker.css"
 
@@ -7,6 +8,11 @@ const PickADate = () => {
     const [isCompleted, setIsCompleted] = useState(false)
     const [startDate, setStartDate] = useState(new Date());
     const [selectedPeople, setSelectedPeople] = useState(1)
+
+    const isWeekday = date => {
+        const day = getDay(date);
+        return day !== 0 && day !== 6;
+    };
 
     const handleSelectedPeople = e => setSelectedPeople(e.target.value)
     const handleSubmit = async () => {
@@ -55,10 +61,11 @@ const PickADate = () => {
                                 className='rounded text-xl mb-2'
                                 selected={startDate}
                                 onChange={date => setStartDate(date)}
+                                dateFormat="dd/MM/yyyy - h:mm aa"
                                 showTimeSelect
                                 timeFormat="p"
                                 timeIntervals={15}
-                                dateFormat="Pp"
+                                filterDate={isWeekday}
                             />
                             <select className="rounded text-xl" onChange={handleSelectedPeople}>
                                 <option value={1}>Apenas Eu</option>

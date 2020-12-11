@@ -21,7 +21,7 @@ export default async (req, res) => {
   const options = {
     calendarId,
     timeMin: new Date().toISOString(),
-    timeMax: addWeeks(new Date(), 1).toISOString(), // Let's get events for one week
+    timeMax: addWeeks(new Date(), 4).toISOString(), // Let's get events for four weeks
     singleEvents: true,
     orderBy: 'startTime',
   }
@@ -35,9 +35,7 @@ export default async (req, res) => {
     const appointments = result?.data?.items.map((appointment) => ({
         start: appointment.start.dateTime || appointment.start.date,
         end: appointment.end.dateTime || appointment.end.date,
-        id: appointment.id,
-        status: appointment.status,
-        creator: appointment.creator,
+      id: appointment.id,
         description: appointment.description,
       }))
 
