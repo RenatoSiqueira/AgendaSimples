@@ -30,7 +30,7 @@ const PickADate = () => {
     }
 
     return (
-        <div class="flex justify-center items-center m-auto mt-20 mb-20 w-full .bg-white">
+        <div className="flex justify-center items-center m-auto mt-20 mb-20 w-full .bg-white">
             <div
                 className="flex flex-col lg:flex-row lg:w-7/12 xl:w-7/12 xl:flex-row justify-center items-center w-11/12 h-32 rounded-md bg-indigo-500 ...">
                 {
