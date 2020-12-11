@@ -15,7 +15,6 @@ export default async (req, res) => {
     subject: process.env.CLIENT_EMAIL
   });
 
-  // client.subject = process.env.CLIENT_EMAIL
   const calendarId = process.env.CALENDAR_ID
   const calendar = google.calendar({ version: 'v3', auth: client })
 
