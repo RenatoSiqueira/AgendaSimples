@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && next",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && next start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && next build"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/RenatoSiqueira/AgendaSimples#readme",
   "dependencies": {
     "autoprefixer": "^10.0.1",
+    "buffer": "^6.0.3",
     "date-fns": "^2.16.1",
     "googleapis": "^66.0.0",
     "next": "^10.0.1",
